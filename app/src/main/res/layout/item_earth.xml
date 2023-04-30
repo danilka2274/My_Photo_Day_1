@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_earth_parent_height"
+    android:animateLayoutChanges="true"
+    android:padding="@dimen/zero">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/item_earth_card_height"
+        android:layout_marginTop="@dimen/card_margin"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:cardElevation="@dimen/card_elevation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="@dimen/earth_card_width_percent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/photo_earth"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:scaleType="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="@dimen/image_height_percent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/ic_no_image" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/caption"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_margin="@dimen/margin_text_def"
+                android:ellipsize="end"
+                android:fontFamily="@font/caveat_bold"
+                android:gravity="center"
+                android:maxLines="@dimen/max_lines"
+                android:textColor="?android:attr/colorPrimary"
+                android:textSize="@dimen/earth_title_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="@dimen/title_height_percent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/photo_earth"
+                tools:text="@string/title_text_example" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/identifier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/text_bk_color"
+                android:ellipsize="end"
+                android:fontFamily="@font/caveat_bold"
+                android:gravity="top|center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/identifier_text_example" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/text_bk_color"
+                android:ellipsize="end"
+                android:fontFamily="@font/caveat_bold"
+                android:gravity="bottom|center_horizontal"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/caption"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="@string/date_text_example" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

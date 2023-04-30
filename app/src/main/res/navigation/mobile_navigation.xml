@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_start">
+
+    <fragment
+        android:id="@+id/nav_picture_apod"
+        android:name="com.example.my_photo_day.ui.pictureapod.ApodFragment"
+        android:label="@string/menu_apod"
+        tools:layout="@layout/fragment_apod" />
+
+    <fragment
+        android:id="@+id/nav_picture_earth"
+        android:name="com.example.my_photo_day.ui.pictureepic.EpicFragment"
+        android:label="@string/menu_earth"
+        tools:layout="@layout/fragment_earth" />
+
+    <fragment
+        android:id="@+id/nav_picture_mars"
+        android:name="com.example.my_photo_day.ui.picturemars.MarsFragment"
+        android:label="@string/menu_mars"
+        tools:layout="@layout/fragment_mars" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.my_photo_day.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_start"
+        android:name="com.example.my_photo_day.ui.start.StartFragment"
+        android:label="@string/menu_start"
+        tools:layout="@layout/fragment_start" />
+
+    <fragment
+        android:id="@+id/nav_notes"
+        android:name="com.example.my_photo_day.ui.notes.NotesFragment"
+        android:label="@string/menu_notes"
+        tools:layout="@layout/fragment_notes" />
+
+</navigation>

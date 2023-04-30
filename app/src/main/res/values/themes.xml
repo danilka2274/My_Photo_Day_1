@@ -1,0 +1,151 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--Серая тема-->
+    <style name="Base.Theme.My_Photo_Day" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/grey_light</item>
+        <item name="colorPrimaryVariant">@color/gray_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/orange_light</item>
+        <item name="colorSecondaryVariant">@color/gray_dark</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <!-- Градиент для фона меню заголовка в шторке. -->
+        <item name="header_background">@drawable/side_nav_bar_orange</item>
+        <!-- Иконка заголовка в шторке. Для серой темы будет темно-серая -->
+        <item name="header_image">@drawable/ic_main_menu_home</item>
+        <!-- Стиль для карточки серой темы -->
+        <item name="card_style">@style/CardStyle</item>
+        <!-- Цвет текста тулбара -->
+        <item name="toolbar_title_color">@color/white</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="image_button_style">@style/ImageButtonStyle</item>
+    </style>
+
+    <style name="Theme.My_Photo_Day.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.My_Photo_Day.NoActionBar.FullScreen" parent="@style/Theme.My_Photo_Day.NoActionBar">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Theme.My_Photo_Day.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColor">@color/dark_gray</item>
+        <!--        <item name="android:backgroundTint">@color/blue</item>-->
+    </style>
+
+    <style name="Theme.My_Photo_Day.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--Стиль карточки серой темы. Тут карточка будет со скруглениями-->
+    <style name="CardStyle">
+        <item name="android:layout_height">@dimen/card_height</item>
+        <item name="android:layout_margin">@dimen/card_margin</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+    </style>
+
+    <!--Стиль AppCompatImageButton серой темы.-->
+    <style name="ImageButtonStyle">
+        <item name="android:layout_width">@dimen/image_button_size</item>
+        <item name="android:layout_height">@dimen/image_button_size</item>
+        <item name="android:layout_marginTop">@dimen/image_button_margin_top</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:padding">@dimen/image_button_padding</item>
+    </style>
+
+    <!--Оранжевая тема-->
+    <style name="Theme.My_Photo_Day.Orange" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/orange_light</item>
+        <item name="colorPrimaryVariant">@color/orange</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/orange_light</item>
+        <item name="colorSecondaryVariant">@color/gray_dark</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <!-- Градиент для фона меню заголовка в шторке. -->
+        <item name="header_background">@drawable/side_nav_bar_orange</item>
+        <!-- Иконка заголовка в шторке. Для оранжевой темы будет белая -->
+        <item name="header_image">@drawable/ic_main_menu_home_orange</item>
+        <!-- Стиль для карточки оранжевой темы -->
+        <item name="card_style">@style/CardStyle.Orange</item>
+        <!-- Цвет текста тулбара -->
+        <item name="toolbar_title_color">@color/gray_dark</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="image_button_style">@style/ImageButtonStyle.Orange</item>
+    </style>
+
+    <style name="Theme.My_Photo_Day.Orange.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.My_Photo_Day.Orange.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.My_Photo_Day.Orange.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--Стиль карточки оранжевой темы. Тут карточка будет без скругленных углов-->
+    <style name="CardStyle.Orange">
+        <item name="android:layout_height">@dimen/card_height</item>
+        <item name="android:layout_margin">@dimen/card_margin</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius_orange</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+    </style>
+
+    <!--Стиль AppCompatImageButton серой темы.-->
+    <style name="ImageButtonStyle.Orange">
+        <item name="android:layout_width">@dimen/image_button_size</item>
+        <item name="android:layout_height">@dimen/image_button_size</item>
+        <item name="android:layout_marginTop">@dimen/image_button_margin_top</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:padding">@dimen/image_button_padding</item>
+    </style>
+
+    <style name="CollapsedAppBar" parent="@android:style/TextAppearance.Medium">
+        <item name="fontFamily">@font/caveat_regular</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="ExpandedAppBar" parent="@android:style/TextAppearance.Medium">
+        <item name="fontFamily">@font/caveat_regular</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <!--Стиль шрифта главного меню навигации-->
+    <style name="NavigationTextStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/caveat_regular</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <dimen name="image_button_size">120dp</dimen>
+    <dimen name="image_button_margin_top">20dp</dimen>
+    <dimen name="image_button_padding">20dp</dimen>
+
+    <!--Стиль для заставки-->
+    <style name="Theme.My_Photo_Day.Splash">
+        <item name="android:windowBackground">@drawable/splash_background_drawable</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>
